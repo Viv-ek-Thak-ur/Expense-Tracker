@@ -18,23 +18,6 @@ function App() {
 
   const [editingTransaction, setEditingTransaction] = useState(null);
   const { enqueueSnackbar } = useSnackbar();
-
-
-  // const [balance, setBalance] = useState(() => {
-  //   return parseFloat(localStorage.getItem("balance")) || 5000;
-  // });
-  // const [expense, setExpense] = useState(() => {
-  //   return parseFloat(localStorage.getItem("expense")) || 0;                     (I changed architecture of app,if i dint change the arch then i had to make one more state that collected all transaction and it wouldhave impacted the performance of the app ,when I wanted the list of all the transaction that happened , or will happen)   omitted all this part for better architecture to provide stability and consistency for the app, by providing one truthy value i.e. transactions state , all the values used for the UI will be derived values from the transactions state
-  // });
-  //  const [categoryExpenses, setCategoryExpenses] = useState(() => {
-  //   return JSON.parse(localStorage.getItem("categoryExpenses")) || {
-  //     Food: 0,
-  //     Travel: 0,
-  //     Shopping: 0,
-  //     Bills: 0
-  //   };
-  // });
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState("");
   const [amount, setAmount] = useState(0);
@@ -42,24 +25,12 @@ function App() {
   const [category, setCategory] = useState("");
   const [date, setDate] = useState("");
 
-  // useEffect(() => {
-  //   const savedBalance = localStorage.getItem("balance");
-  //   const savedExpense = localStorage.getItem("expense");
-  //   if (savedBalance) setBalance(parseFloat(savedBalance));
-  //   if (savedExpense) setExpense(parseFloat(savedExpense));
-  // }, []); requred if lazy initialiser is not used and u use isloaded flag
 
-  // useEffect(() => {
-  //   localStorage.setItem("balance", balance);
-  // }, [balance]);
 
-  // useEffect(() => {
-  //   localStorage.setItem("expense", expense);
-  // }, [expense]);
 
-  // useEffect(() => {
-  //   localStorage.setItem("categoryExpenses", JSON.stringify(categoryExpenses));
-  // }, [categoryExpenses]);
+
+
+
 
   // DERIVED VALUES
 
@@ -90,16 +61,41 @@ function App() {
       }, {});
   }, [transactions]);
 
+  
+  
+  
+  
+  
+  
+  
+  
   // PERSIST VALUES ON CHANGE
 
   useEffect(() => {
     localStorage.setItem("transactions", JSON.stringify(transactions));
   }, [transactions]);
 
+
+
+
+
+
+
+
+
+
+
   const handleOpenModal = (type) => {
     setIsModalOpen(true);
     setModalType(type);
   };
+
+
+
+
+
+
+
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -109,6 +105,15 @@ function App() {
     setTitle("");
     setEditingTransaction(null);
   };
+
+
+
+
+
+
+
+
+
 
   const handleSubmit = () => {
   if (isNaN(amount) || amount <= 0) return;
@@ -146,12 +151,30 @@ function App() {
   
 };
 
-  // Transform categoryTotals for  chart
+
+
+
+
+
+
+
+
+
+
+ 
   const chartData = Object.keys(categoryTotals).map((cat) => ({
     name: cat,
     value: categoryTotals[cat],
   }));
 
+
+
+
+
+
+
+
+  
   return (
     <div className="App">
       <h1 style={{ color: "white" }}>Expense Tracker</h1>

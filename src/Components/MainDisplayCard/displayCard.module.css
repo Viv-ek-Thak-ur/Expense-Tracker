@@ -25,17 +25,17 @@
 }
 
 .income {
-  color: #30eb06; /* green from Figma */
+   color: #30eb06; 
 }
 
 .expense {
-  color: #dc2626; /* red from Figma */
+  color: #dc2626; 
 }
 
 .button {
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 999px; /* pill shape */
+  border-radius: 999px; 
   font-size: 25px;
   font-weight: 600;
   cursor: pointer;

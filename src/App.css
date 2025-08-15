@@ -1,4 +1,4 @@
-/* Reset + base */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,18 +7,18 @@
 
 body, html, #root {
   height: 100%;
-  background-color: #3c3838; /* Dark background */
+  background-color: #3c3838; 
   font-family: Arial, sans-serif;
 }
 
-/* App container */
+
 .App {
   background-color: #3c3838;
   min-height: 100vh;
   padding: 1rem 2rem;
 }
 
-/* Heading */
+
 h1 {
   color: white;
   margin-bottom: 1rem;
@@ -31,25 +31,25 @@ h1 {
 }
 
 
-/* TOP SECTION: Dashboard */
+
 .dashboard {
   background-color: #5b5b5b;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  gap: 1.5rem;          /* spacing between cards */
-  margin-bottom: 2rem;  /* space under the top row */
+  gap: 1.5rem;         
+  margin-bottom: 2rem;  
   border-radius: 10px;
   
 }
 
 .dashboard > * {
-  flex: 1 1 300px;  /* equal width */
+  flex: 1 1 300px;  
   border-radius: 10px;
-  overflow: hidden; /* for rounded edges on child content */
+  overflow: hidden; 
 }
 
-/* BOTTOM SECTION: Details board */
+
 .details-board {
   
   padding: 2rem;

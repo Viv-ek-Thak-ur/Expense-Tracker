@@ -6,27 +6,27 @@ export default function TransactionsList({ transactions, onEdit, onDelete }) {
   const itemsPerPage = 3;
   const [currentPage, setCurrentPage] = useState(1);
 
-  // ✅ Ref to keep track of previous transactions length
+  
   const prevLengthRef = useRef(transactions.length);
 
   const totalPages = Math.max(Math.ceil(transactions.length / itemsPerPage), 1);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentItems = transactions.slice(startIndex, startIndex + itemsPerPage);
 
-  // ✅ Sync currentPage whenever transactions array changes
+  
   useEffect(() => {
-    // Flag: If currentPage exceeds totalPages (after deleting), go to last page
+    
     if (currentPage > totalPages) setCurrentPage(totalPages);
 
-    // Flag: If no transactions, reset to page 1
+   
     if (transactions.length === 0) setCurrentPage(1);
 
-    // ✅ NEW: Auto-jump to last page when new transaction is added
+    
     if (transactions.length > prevLengthRef.current) {
       setCurrentPage(totalPages); 
     }
 
-    // ✅ Update previous length for next comparison
+    
     prevLengthRef.current = transactions.length;
   }, [transactions, totalPages, currentPage]);
 

@@ -37,9 +37,9 @@ function PieChartDisplay({ data }) {
         </Pie>
         <Tooltip />
         <Legend
-          layout="horizontal" // legends in a row
-          verticalAlign="bottom" // below the chart
-          align="center" // center horizontally
+          layout="horizontal" 
+          verticalAlign="bottom" 
+          align="center" 
         />
       </PieChart>
     </ResponsiveContainer>
