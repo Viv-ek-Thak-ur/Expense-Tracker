@@ -1,0 +1,56 @@
+.card {
+  background: #9a9696;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+  margin: 1.5rem;
+  
+}
+
+.label {
+  font-size: 40px;
+  font-weight: 500;
+  color: #ffffff; 
+}
+
+.amount {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.income {
+  color: #30eb06; /* green from Figma */
+}
+
+.expense {
+  color: #dc2626; /* red from Figma */
+}
+
+.button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px; /* pill shape */
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.incomeBtn {
+  background: linear-gradient(90deg, #9efe63, #30eb06);
+  color: white;
+}
+
+.expenseBtn {
+  background: linear-gradient(90deg, #dc2626, #f89c71);
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.9;
+}

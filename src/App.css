@@ -1,38 +1,69 @@
+/* Reset + base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  height: 100%;
+  background-color: #3c3838; /* Dark background */
+  font-family: Arial, sans-serif;
+}
+
+/* App container */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #3c3838;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem 2rem;
+}
+
+/* Heading */
+h1 {
   color: white;
+  margin-bottom: 1rem;
+}
+.heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* TOP SECTION: Dashboard */
+.dashboard {
+  background-color: #5b5b5b;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.5rem;          /* spacing between cards */
+  margin-bottom: 2rem;  /* space under the top row */
+  border-radius: 10px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dashboard > * {
+  flex: 1 1 300px;  /* equal width */
+  border-radius: 10px;
+  overflow: hidden; /* for rounded edges on child content */
+}
+
+/* BOTTOM SECTION: Details board */
+.details-board {
+  
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin: 1rem -2rem;
+}
+
+.details-board > * {
+  flex: 1 1 300px;
+  
+
+  
 }
